@@ -4,7 +4,7 @@ Theme: You are your enemy
 
 Game Name: sNakE gOnE WroOng
 
-The opposite of Snake where instead of trying to survive, the game will always crash regardless if you think you are winning. This game is buggy by choice, trust.
+Recreation of the Snake Game using the Pygame library. Instead of trying to survive, the game will always crash regardless if you think you are winning. This game is buggy by design, trust.
 
 ## Images:
 
