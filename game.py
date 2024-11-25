@@ -1,7 +1,8 @@
+import asyncio
 import random
 import pygame
 import sys
-from pygame import Vector2
+from pygame import Color, Vector2
 
 pygame.init()
 
@@ -16,12 +17,12 @@ board = Vector2(int(units), int(units))
 screen = pygame.display.set_mode((space * 2 + board.x * GRIDSIZE, space * 2 + board.y * GRIDSIZE))
 pygame.display.set_caption('sNakE gOnE WroOng')
 
-FrameGarden = pygame.image.load("images/frame.png")
-RedApple = pygame.image.load("images/redApple.png")
-GreenApple = pygame.image.load("images/greenApple.png")
-YellowApple = pygame.image.load("images/yellowApple.png")
-HeadForward = pygame.image.load("images/headForward.png")
-InfoThing = pygame.image.load("images/info.png")
+FrameGarden = pygame.image.load("frame.png")
+RedApple = pygame.image.load("redApple.png")
+GreenApple = pygame.image.load("greenApple.png")
+YellowApple = pygame.image.load("yellowApple.png")
+HeadForward = pygame.image.load("headForward.png")
+InfoThing = pygame.image.load("info.png")
 frameGarden = pygame.transform.scale(FrameGarden, ((space * 3) + board.x * GRIDSIZE, (space * 3) + board.y * GRIDSIZE))
 redApple = pygame.transform.scale(RedApple, (GRIDSIZE, GRIDSIZE))
 infoThing = pygame.transform.scale(InfoThing, (100, 100))
@@ -30,9 +31,6 @@ yellowApple = pygame.transform.scale(YellowApple, (GRIDSIZE, GRIDSIZE))
 headForward = pygame.transform.scale(HeadForward, (GRIDSIZE, GRIDSIZE))
 speed = pygame.mixer.Sound("whoosh.mp3")
 pygame.mixer.music.load('whoosh.mp3')
-
-color = (255, 255, 255)
-screen.fill(color)
 
 def draw_board():
     for x in range(int(board.x)):
